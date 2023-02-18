@@ -22,5 +22,19 @@ void main(){
                 printf(" ");
             }
         }printf("\n");
+    }count = inp;
+    for(int i=0; i<=num; i++){
+        for(int j=0; j<inp; j++){
+            if(j == i){
+                tmp = count;
+                count -= 2;
+                while(tmp){
+                    printf("*");
+                    tmp--;
+                }break;
+            }else{
+                printf(" ");
+            }
+        }printf("\n");
     }
 }

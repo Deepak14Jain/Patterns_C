@@ -2,8 +2,9 @@
 
 void main(){
     printf("Enter an odd Integer:");
-    int inp, count = 1, num, tmp;
+    int inp, count, num, tmp;
     scanf("%d",&inp);
+    count = inp;
     if((inp%2) == 0){
         printf("Only odd integer\nRetry!\n");
         return;
@@ -11,9 +12,9 @@ void main(){
     num = (inp-1)/2;
     for(int i=0; i<=num; i++){
         for(int j=0; j<inp; j++){
-            if((i+j) == num){
+            if(j == i){
                 tmp = count;
-                count += 2;
+                count -= 2;
                 while(tmp){
                     printf("*");
                     tmp--;
